@@ -7,7 +7,7 @@ import hello.core.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService{
 
-    private final MemberRepository memberRepository;
+    private final MemberRepository memberRepository; //전부 인터페이스만 바라보고 구현체 누구할지는 appconfig가 알아서  처리
     private final DiscountPolicy discountPolicy;
 
     public OrderServiceImpl(DiscountPolicy discountPolicy, MemberRepository memberRepository) {

@@ -1,10 +1,15 @@
 package hello.core.member;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemberServiceImpl implements MemberService
 {   //구현체 하나면 관례상 뒤에 Impl이라고 붙임
 
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }//memberRepository의 구현체에 뭐가 들어갈지 생성자를 통해서 넣어주자 => appconfig 통해서 memorymemberrepository 넣음

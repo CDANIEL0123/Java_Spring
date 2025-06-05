@@ -22,7 +22,7 @@ public class AppConfig_backup {
     } //memorymemberrepository가 중복되던 것을 이제 이부분만 수정해도 반영될 수 있게 리팩터링
 
     public OrderService orderService(){
-        return new OrderServiceImpl(discountPolicy(), memberRepository());
+        return new OrderServiceImpl(memberRepository(),discountPolicy());
     }
 
     public DiscountPolicy discountPolicy(){
